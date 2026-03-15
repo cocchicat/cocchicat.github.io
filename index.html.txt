@@ -1,0 +1,182 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Personal Page</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body{
+background:#fafafa;
+color:#333;
+line-height:1.6;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:white;
+border-bottom:1px solid #eee;
+z-index:1000;
+}
+
+nav{
+max-width:900px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+padding:14px 20px;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+margin-left:18px;
+font-size:14px;
+}
+
+nav a:hover{
+color:#666;
+}
+
+section{
+max-width:900px;
+margin:auto;
+padding:100px 20px 70px;
+}
+
+h1{
+font-size:32px;
+margin-bottom:10px;
+}
+
+h2{
+margin-bottom:15px;
+}
+
+.card{
+background:white;
+border-radius:12px;
+padding:22px;
+margin-top:15px;
+border:1px solid #eee;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+gap:15px;
+}
+
+.icon{
+font-size:28px;
+margin-bottom:8px;
+}
+
+footer{
+text-align:center;
+padding:30px;
+color:#888;
+font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<div><strong>My Page</strong></div>
+<div>
+<a href="#about">About</a>
+<a href="#skating">Skating</a>
+<a href="#violin">Violin</a>
+<a href="#favorites">Favorites</a>
+</div>
+</nav>
+</header>
+
+<section id="about">
+<h1>Hello!</h1>
+<div class="card">
+<h2>About Me</h2>
+<p>
+I'm an 11th grade student who enjoys reading, photography, and taking outdoor walks.
+I like spending time learning new things and exploring creative hobbies. 
+When I'm not studying, you'll usually find me skating, playing violin, or capturing moments with a camera.
+</p>
+</div>
+</section>
+
+<section id="skating">
+<h1>Figure Skating</h1>
+<div class="card">
+<div class="icon">⛸️</div>
+<p>
+I've been figure skating for about 7 years. I love the feeling of being on the ice,
+learning new skills, and improving over time. Skating makes me feel energized and alive,
+and one of the best parts is the amazing people in the skating community.
+</p>
+</div>
+</section>
+
+<section id="violin">
+<h1>Violin</h1>
+<div class="card">
+<div class="icon">🎻</div>
+<p>
+I've played violin for 9 years and currently participate in SYSO and SCMS.
+Music is an important part of my life, and I especially enjoy classical music.
+Playing violin has helped me develop discipline, focus, and appreciation for music.
+</p>
+</div>
+</section>
+
+<section id="favorites">
+<h1>Favorites</h1>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">🍲</div>
+<strong>Food</strong>
+<p>Power bowls and chicken soup</p>
+</div>
+
+<div class="card">
+<div class="icon">🎼</div>
+<strong>Music</strong>
+<p>Classical music</p>
+</div>
+
+<div class="card">
+<div class="icon">🏠</div>
+<strong>Place</strong>
+<p>Home</p>
+</div>
+
+<div class="card">
+<div class="icon">🐱</div>
+<strong>Animal</strong>
+<p>Cats</p>
+</div>
+
+</div>
+</section>
+
+<footer>
+<p>Personal webpage</p>
+</footer>
+
+</body>
+</html>
