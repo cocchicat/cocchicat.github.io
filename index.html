@@ -6,107 +6,150 @@
 <title>Cocchi's Club</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+/* General */
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
 }
 
-body{
-background:#fafafa;
-color:#333;
-line-height:1.6;
+body {
+  background:#fff8f0;
+  color:#333;
+  line-height:1.6;
 }
 
-header{
-position:fixed;
-top:0;
-width:100%;
-background:white;
-border-bottom:1px solid #eee;
-z-index:1000;
+/* Header */
+header {
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#fff3e0;
+  border-bottom:2px solid #ffd6a5;
+  z-index:1000;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
 }
 
-nav{
-max-width:900px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-padding:14px 20px;
+nav {
+  max-width:900px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  padding:14px 20px;
 }
 
-nav a{
-text-decoration:none;
-color:#333;
-margin-left:18px;
-font-size:14px;
+nav a {
+  text-decoration:none;
+  color:#333;
+  margin-left:20px;
+  font-weight:500;
+}
+nav a:hover { color:#d96a6a; }
+
+/* Hero */
+.hero {
+  text-align:center;
+  padding:140px 20px 80px;
+  background:linear-gradient(135deg, #ffe3e3, #fff0f5);
+  border-bottom-left-radius:50% 10%;
+  border-bottom-right-radius:50% 10%;
 }
 
-nav a:hover{
-color:#777;
+.hero h1 {
+  font-size:48px;
+  color:#d96a6a;
+  margin-bottom:10px;
+  animation:fadeIn 1.2s ease;
+}
+.hero p { color:#8b5e5e; font-size:18px; }
+
+/* Sections */
+section {
+  max-width:900px;
+  margin:auto;
+  padding:80px 20px 60px;
 }
 
-section{
-max-width:900px;
-margin:auto;
-padding:100px 20px 70px;
+h2 {
+  font-size:28px;
+  color:#d96a6a;
+  margin-bottom:20px;
+  position:relative;
+}
+h2::after {
+  content:'';
+  display:block;
+  width:60px;
+  height:3px;
+  background:#ffd6a5;
+  margin-top:6px;
+  border-radius:2px;
 }
 
-h1{
-font-size:34px;
-margin-bottom:10px;
+/* Cards */
+.card {
+  background:#fff0f5;
+  border-radius:16px;
+  padding:25px;
+  margin-top:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+.card:hover { transform:translateY(-4px); }
+
+/* Grid */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
 }
 
-h2{
-margin-bottom:15px;
+/* Photo gallery */
+.gallery {
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:12px;
+  transition:transform 0.3s;
+}
+.gallery:hover { transform:scale(1.05); }
+
+/* Footer */
+footer {
+  text-align:center;
+  padding:40px;
+  color:#8b5e5e;
+  font-size:14px;
+  background:#fff3e0;
+  border-top:2px solid #ffd6a5;
+  margin-top:50px;
 }
 
-.card{
-background:white;
-border-radius:12px;
-padding:22px;
-margin-top:15px;
-border:1px solid #eee;
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity:0; transform: translateY(-20px); }
+  100% { opacity:1; transform: translateY(0); }
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
+/* Buttons */
+.button {
+  display:inline-block;
+  background:#ffd6a5;
+  color:#d96a6a;
+  padding:10px 18px;
+  border-radius:12px;
+  font-weight:500;
+  transition:background 0.2s,color 0.2s;
+  margin-top:10px;
 }
+.button:hover { background:#d96a6a; color:#fff8f0; }
 
-.photo{
-height:160px;
-background:#eee;
-border-radius:10px;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:40px;
-}
+/* Hobby icons */
+.hobby-icon { font-size:36px; margin-bottom:10px; text-align:center; display:block; }
 
-footer{
-text-align:center;
-padding:30px;
-color:#888;
-font-size:14px;
-}
-
-.hero{
-text-align:center;
-padding-top:120px;
-padding-bottom:60px;
-}
-
-.hero h1{
-font-size:42px;
-}
-
-.hero p{
-color:#666;
-margin-top:10px;
-}
+/* Photo captions */
+.photo-caption { text-align:center; margin-top:6px; font-size:14px; color:#8b5e5e; }
 </style>
 </head>
 
@@ -127,117 +170,87 @@ margin-top:10px;
 
 <div class="hero">
 <h1>Cocchi's Club 🐱</h1>
-<p>The official fan club for Cocchi</p>
+<p>The ultimate fan club for Cocchi—join the fun!</p>
 </div>
 
 <section id="bio">
 <h2>Biography</h2>
 <div class="card">
-<p>
-Cocchi is a 5-year old Siberian cat from the Angel of Siberia cattery in South Seattle. As a kitten, she was first named Angela after the head of the cattery, before she was re-named Cocchi after the manga character from Chi's Sweet Home. A brown tabby cat with clear green eyes, Cocchi has received high praise for her reverent and stunning beauty, capturing has the hearts of the nation with her charming visage.
+<p>Cocchi is a 5-year old Siberian cat from the Angel of Siberia cattery in South Seattle. As a kitten, she was first named Angela after the head of the cattery, before she was re-named Cocchi after the manga character from Chi's Sweet Home. A brown tabby cat with clear green eyes, Cocchi has received high praise for her reverent and stunning beauty, capturing has the hearts of the nation with her charming visage.
 </p>
-
-<p style="margin-top:10px;">
-Favorite food: Minnow<br>
-Favorite season: Winter<br>
-Favorite sleeping place: Cat tree<br>
-Personality type: ISTP
+<p style="margin-top:12px;">
+<b>Favorite food:</b> Minnow<br>
+<b>Favorite season:</b> Winter<br>
+<b>Favorite sleeping place:</b> Cat tree<br>
+<b>Personality type:</b> ISTP
 </p>
 </div>
 </section>
 
 <section id="hobbies">
 <h2>Hobbies</h2>
-
 <div class="grid">
-
-<div class="card">
-🌤️<br><br>
-Sunbathing
-</div>
-
-<div class="card">
-🐦‍⬛<br><br>
-Bird-watching
-</div>
-
-<div class="card">
-🧶<br><br>
-Playing with hair ties
-</div>
-
-<div class="card">
-🌃<br><br>
-Sleeping
-</div>
-
+<div class="card"><span class="hobby-icon">🌤️</span>Sunbathing</div>
+<div class="card"><span class="hobby-icon">🐦‍⬛</span>Bird-watching</div>
+<div class="card"><span class="hobby-icon">🧶</span>Playing with hair ties</div>
+<div class="card"><span class="hobby-icon">🌃</span>Sleeping</div>
 </div>
 </section>
 
 <section id="join">
 <h2>How to Join the Club</h2>
-
 <div class="card">
 <p>Membership is open to anyone who:</p>
-
-<ul style="margin-top:10px; margin-left:20px;">
+<ul style="margin-left:20px;margin-top:10px;">
 <li>Appreciates cats</li>
 <li>Believes Cocchi is adorable</li>
 <li>Is willing to admire photos of Cocchi</li>
 </ul>
-
-<p style="margin-top:12px;">
-To join: simply declare yourself a member of Cocchi’s Club!
-</p>
-
+<p style="margin-top:12px;">To join: simply declare yourself a member of Cocchi’s Club!</p>
+<a class="button" href="#bio">Join Now</a>
 </div>
 </section>
 
 <section id="merch">
 <h2>Club Merch</h2>
-
 <div class="grid">
-
-<div class="card">
-👕<br><br>
-Cocchi Club T-Shirts
+<div class="card">👕 Cocchi Club T-Shirts</div>
+<div class="card">☕ Cocchi Coffee Mugs</div>
+<div class="card">🎒 Cocchi Stickers</div>
+<div class="card">📓 Cocchi Notebooks</div>
 </div>
-
-<div class="card">
-☕<br><br>
-Cocchi Coffee Mugs
-</div>
-
-<div class="card">
-🎒<br><br>
-Cocchi Stickers
-</div>
-
-<div class="card">
-📓<br><br>
-Cocchi Notebooks
-</div>
-
-</div>
-
 </section>
 
 <section id="photos">
 <h2>Photos</h2>
-
+<p>Here are some special moments of Cocchi:</p>
 <div class="grid">
 
-<div class="photo">🐱</div>
-<div class="photo">🐾</div>
-<div class="photo">😺</div>
-<div class="photo">📸</div>
+<div class="card">
+<div class="gallery">🐱</div>
+<p class="photo-caption">Cocchi enjoying a sunny nap</p>
+</div>
+
+<div class="card">
+<div class="gallery">🐾</div>
+<p class="photo-caption">Exploring her favorite cat tree</p>
+</div>
+
+<div class="card">
+<div class="gallery">😺</div>
+<p class="photo-caption">Intently watching birds outside</p>
+</div>
+
+<div class="card">
+<div class="gallery">📸</div>
+<p class="photo-caption">Cocchi’s adorable close-up</p>
+</div>
 
 </div>
 
 <div class="card">
-<p>You can replace these icons with real photos of Cocchi later!</p>
+<p>You can replace these placeholders with real photos while keeping captions!</p>
 </div>
-
 </section>
 
 <footer>
