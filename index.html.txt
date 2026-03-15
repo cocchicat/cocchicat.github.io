@@ -1,18 +1,16 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Personal Page</title>
+<title>Cocchi's Club</title>
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
 }
 
 body{
@@ -46,7 +44,7 @@ font-size:14px;
 }
 
 nav a:hover{
-color:#666;
+color:#777;
 }
 
 section{
@@ -56,7 +54,7 @@ padding:100px 20px 70px;
 }
 
 h1{
-font-size:32px;
+font-size:34px;
 margin-bottom:10px;
 }
 
@@ -74,13 +72,18 @@ border:1px solid #eee;
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:15px;
 }
 
-.icon{
-font-size:28px;
-margin-bottom:8px;
+.photo{
+height:160px;
+background:#eee;
+border-radius:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:40px;
 }
 
 footer{
@@ -89,6 +92,21 @@ padding:30px;
 color:#888;
 font-size:14px;
 }
+
+.hero{
+text-align:center;
+padding-top:120px;
+padding-bottom:60px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+color:#666;
+margin-top:10px;
+}
 </style>
 </head>
 
@@ -96,86 +114,134 @@ font-size:14px;
 
 <header>
 <nav>
-<div><strong>My Page</strong></div>
+<strong>🐾 Cocchi's Club</strong>
 <div>
-<a href="#about">About</a>
-<a href="#skating">Skating</a>
-<a href="#violin">Violin</a>
-<a href="#favorites">Favorites</a>
+<a href="#bio">Biography</a>
+<a href="#hobbies">Hobbies</a>
+<a href="#join">Join</a>
+<a href="#merch">Merch</a>
+<a href="#photos">Photos</a>
 </div>
 </nav>
 </header>
 
-<section id="about">
-<h1>Hello!</h1>
+<div class="hero">
+<h1>Cocchi's Club 🐱</h1>
+<p>The official fan club for Cocchi</p>
+</div>
+
+<section id="bio">
+<h2>Biography</h2>
 <div class="card">
-<h2>About Me</h2>
 <p>
-I'm an 11th grade student who enjoys reading, photography, and taking outdoor walks.
-I like spending time learning new things and exploring creative hobbies. 
-When I'm not studying, you'll usually find me skating, playing violin, or capturing moments with a camera.
+Cocchi is a 5-year old Siberian cat from the Angel of Siberia cattery in South Seattle. As a kitten, she was first named Angela after the head of the cattery, before she was re-named Cocchi after the manga character from Chi's Sweet Home. A brown tabby cat with clear green eyes, Cocchi has received high praise for her reverent and stunning beauty, capturing has the hearts of the nation with her charming visage.
+</p>
+
+<p style="margin-top:10px;">
+Favorite food: Minnow<br>
+Favorite season: Winter<br>
+Favorite sleeping place: Cat tree<br>
+Personality type: ISTP
 </p>
 </div>
 </section>
 
-<section id="skating">
-<h1>Figure Skating</h1>
-<div class="card">
-<div class="icon">⛸️</div>
-<p>
-I've been figure skating for about 7 years. I love the feeling of being on the ice,
-learning new skills, and improving over time. Skating makes me feel energized and alive,
-and one of the best parts is the amazing people in the skating community.
-</p>
-</div>
-</section>
-
-<section id="violin">
-<h1>Violin</h1>
-<div class="card">
-<div class="icon">🎻</div>
-<p>
-I've played violin for 9 years and currently participate in SYSO and SCMS.
-Music is an important part of my life, and I especially enjoy classical music.
-Playing violin has helped me develop discipline, focus, and appreciation for music.
-</p>
-</div>
-</section>
-
-<section id="favorites">
-<h1>Favorites</h1>
+<section id="hobbies">
+<h2>Hobbies</h2>
 
 <div class="grid">
 
 <div class="card">
-<div class="icon">🍲</div>
-<strong>Food</strong>
-<p>Power bowls and chicken soup</p>
+🌤️<br><br>
+Sunbathing
 </div>
 
 <div class="card">
-<div class="icon">🎼</div>
-<strong>Music</strong>
-<p>Classical music</p>
+🐦‍⬛<br><br>
+Bird-watching
 </div>
 
 <div class="card">
-<div class="icon">🏠</div>
-<strong>Place</strong>
-<p>Home</p>
+🧶<br><br>
+Playing with hair ties
 </div>
 
 <div class="card">
-<div class="icon">🐱</div>
-<strong>Animal</strong>
-<p>Cats</p>
+🌃<br><br>
+Sleeping
 </div>
 
 </div>
 </section>
 
+<section id="join">
+<h2>How to Join the Club</h2>
+
+<div class="card">
+<p>Membership is open to anyone who:</p>
+
+<ul style="margin-top:10px; margin-left:20px;">
+<li>Appreciates cats</li>
+<li>Believes Cocchi is adorable</li>
+<li>Is willing to admire photos of Cocchi</li>
+</ul>
+
+<p style="margin-top:12px;">
+To join: simply declare yourself a member of Cocchi’s Club!
+</p>
+
+</div>
+</section>
+
+<section id="merch">
+<h2>Club Merch</h2>
+
+<div class="grid">
+
+<div class="card">
+👕<br><br>
+Cocchi Club T-Shirts
+</div>
+
+<div class="card">
+☕<br><br>
+Cocchi Coffee Mugs
+</div>
+
+<div class="card">
+🎒<br><br>
+Cocchi Stickers
+</div>
+
+<div class="card">
+📓<br><br>
+Cocchi Notebooks
+</div>
+
+</div>
+
+</section>
+
+<section id="photos">
+<h2>Photos</h2>
+
+<div class="grid">
+
+<div class="photo">🐱</div>
+<div class="photo">🐾</div>
+<div class="photo">😺</div>
+<div class="photo">📸</div>
+
+</div>
+
+<div class="card">
+<p>You can replace these icons with real photos of Cocchi later!</p>
+</div>
+
+</section>
+
 <footer>
-<p>Personal webpage</p>
+Cocchi's Club — Official Fan Club 🐾
 </footer>
 
 </body>
